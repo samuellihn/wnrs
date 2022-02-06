@@ -1,0 +1,67 @@
+@import '../theme'
+
+.form
+  width: 100%
+
+  .section
+    margin: spacing(2, 0)
+
+  .subheader
+    @extend %overline
+    margin-bottom: spacing(2)
+
+  input
+    background: palette(theme, dark)
+    color: palette(theme, contrastText)
+    border-radius: $border-radius
+    padding: spacing(2)
+    @extend %uppercase
+
+    &::placeholder
+      opacity: 0.6
+      color: palette(theme, contrastText)
+
+  .error
+    background: palette(theme, main)
+    color: palette(theme, contrastText)
+    padding: spacing(0, 1)
+    margin-left: spacing(2)
+
+  .names
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: spacing(2)
+
+  .name
+    width: 100%
+    display: flex
+    align-items: center
+    gap: spacing(2)
+
+    &:last-of-type
+      opacity: 0.6
+
+    .nameInput
+      display: contents
+
+    .player
+      @extend %overline
+      font-size: 0.8rem
+        
+    .button
+      padding: spacing(1)
+      opacity: 0.6
+      border-radius: $border-radius
+      cursor: pointer
+      transition: background 100ms, opacity 100ms
+      width: max-content
+      display: flex
+      flex-direction: row
+
+      &:hover
+        background: palette(theme, dark)
+        opacity: .8
+
+      .icon
+        font-size: 1.25rem

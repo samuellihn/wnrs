@@ -1,0 +1,80 @@
+@import 'theme'
+
+html
+  min-height: calc(100% + env(safe-area-inset-top))
+  height: 100%
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif
+  font-size: 16px
+  font-weight: normal
+  scroll-behavior: smooth
+  -webkit-font-smoothing: antialiased
+  background: white
+  color: black
+
+body
+  font-family: map-get($typography, fontFamily)
+
+// Resets
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+button
+  border: 0
+  outline: 0
+  all: unset
+
+a
+  color: inherit
+
+fieldset
+  all: unset
+
+  legend
+    all: unset
+
+label
+  display: block
+
+input
+  background-color: inherit
+  color: inherit
+  border: none
+  display: inline-block
+
+  &[type="submit"]
+    border: 1px solid
+
+dialog
+  all: unset
+
+// Set up CSS Variables
+// Ref: https://codepen.io/jakealbaugh/post/css4-variables-and-sass
+
+:root
+  @each $name, $color in $light-colors
+    @if type-of($color) == "map" 
+      @each $subname, $subcolor in $color 
+        --#{$name}-#{$subname}: #{$subcolor}   
+    @else if type-of($color) == "color" 
+      --#{$name}: #{$color}
+
+@each $theme, $map in $card-themes 
+  [data-theme='#{$theme}']
+    @each $name, $color in $map
+      @if type-of($color) == "map" 
+        @each $subname, $subcolor in $color 
+          --#{$name}-#{$subname}: #{$subcolor}   
+      @else if type-of($color) == "color" 
+        --theme-#{$name}: #{$color}
+
+// Base background & color
+
+#themed-app
+  height: 100vh
+  height: var(--app-height, 100vh)
+  background: palette(misc, background)
+  color: palette(text, primary)

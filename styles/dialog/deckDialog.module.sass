@@ -1,0 +1,59 @@
+@import '../theme'
+@import '../animations'
+
+.dialog
+  overflow: hidden
+
+.listContainer
+  display: flex
+  flex-direction: column
+  max-height: 95vh
+
+  .list
+    flex: 0 1 auto
+    overflow-y: auto
+    padding: spacing(4, 6, 6)
+    justify-content: center
+
+.root
+  display: flex
+  align-items: center
+
+  @each $theme, $map in $card-themes 
+    &.#{$theme}
+      background: map-get($map, 'main')
+      color: map-get($map, 'contrastText')
+
+  .back
+    align-self: stretch
+    height: unset
+
+  .info
+    white-space: pre-wrap
+    text-align: center
+    padding: spacing(4)
+    flex: 1
+
+    .title
+      padding: spacing(4, 0)
+      @extend %uppercase
+      font-size: 1rem
+      white-space: pre-line
+
+    .description
+      padding: spacing(4, 0)
+      @extend %uppercase
+      border-top: 1px solid palette(misc, divider)
+      
+    .preview
+      padding: spacing(4, 0)
+      text-align: left
+      font-size: 0.9rem
+      font-weight: map-get($typography, fontWeight, bold)
+      border-top: 1px solid palette(misc, divider)
+
+    .instruction
+      text-align: left
+      font-size: 0.75rem
+      padding: spacing(4, 0)
+      border-top: 1px solid palette(misc, divider)

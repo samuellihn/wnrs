@@ -1,0 +1,266 @@
+// App Configuration
+
+$card-sm-width: 360px;
+$card-sm-height: 248px;
+
+$border-radius: 4px;
+
+$div-shadow-bottom: 0 1px 0 rgba(4,4,5,0.2), 0 1.5px 0 rgba(6,6,7,0.05), 0 2px 0 rgba(4,4,5,0.05);
+$div-shadow-top: 0 -1px 0 rgba(4,4,5,0.2), 0 -1.5px 0 rgba(6,6,7,0.05), 0 -2px 0 rgba(4,4,5,0.05);
+
+// Animation Configuration
+
+// CSS Variables
+
+$typography: (
+  fontSize: 16px,
+  fontFamily: ('Arimo', 'Helvetica Neue', 'Helvetica', 'Arimo', 'Arial', 'sans-serif'),
+  fontWeight: (
+    light:   300,
+    regular: 400,
+    medium:  500,
+    bold:    700,
+    heavy:   900,
+  )
+);
+
+$z-index: (
+  dialog: 500,
+);
+
+%overline {
+  font-size: 0.65rem;
+  font-weight: map-get($typography, fontWeight, bold);
+  letter-spacing: 1.25px;
+  text-transform: uppercase
+}
+
+%uppercase {
+  font-weight: map-get($typography, fontWeight, bold);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px
+}
+
+// Palette
+
+$dark-colors: (
+  theme: (
+    main: #c10016,
+    dark: #880000,
+    light: #fb4d3f,
+    contrastText: #ffffff,
+    paper: #f6f6f6,
+    contrastPaperText: #c10016,
+  ),
+  text: (
+    primary:   #ffffff,
+    secondary: #82868c,
+  ),
+  misc: (
+    background: #121213,
+    divider: rgba(255, 255, 255, .12),
+  ),
+  action: (
+    hover: rgba(255, 255, 255, 0.05),
+    select: rgba(255, 255, 255, 0.1),
+    disabled: rgba(255, 255, 255, 0.26),
+    disabledBg: rgba(255, 255, 255, 0.15),
+    disabledOpacity: 0.38,
+  )
+);
+
+$light-colors: (
+  theme: (
+    main: #c10016,
+    dark: #880000,
+    light: #fb4d3f,
+    contrastText: #ffffff,
+    paper: #f6f6f6,
+    contrastPaperText: #c10016,
+  ),
+  text: (
+    primary:   #181818,
+    secondary: #82868c,
+  ),
+  misc: (
+    background: #f5f4f3,
+    divider: rgba(0, 0, 0, .12),
+  ),
+  action: (
+    hover: rgba(0, 0, 0, 0.05),
+    select: rgba(0, 0, 0, 0.1),
+    disabled: rgba(0, 0, 0, 0.26),
+    disabledBg: rgba(0, 0, 0, 0.15),
+    disabledOpacity: 0.38,
+  )
+);
+
+$card-themes: (
+  main: (
+    main: #c10016,
+    dark: #880000,
+    light: #fb4d3f,
+    contrastText: #ffffff,
+    paper: #f6f6f6,
+    contrastPaperText: #c10016,
+  ),
+  selfLove: (
+    main: #efc5c3,
+    dark: #bc9493,
+    light: #fff8f6,
+    contrastText: #c10016,
+    paper: #f6f6f6,
+    contrastPaperText: #c10016,
+  ),
+  voting: (
+    main: #272c6c,
+    dark: #000340,
+    light: #57559b,
+    contrastText: #f6f6f6,
+    paper: #f6f6f6,
+    contrastPaperText: #181818
+  ),
+  race: (
+    main: #181818,
+    dark: #000000,
+    light: #3e3e3e,
+    contrastText: #ffffff,
+    paper: #f6f6f6,
+    contrastPaperText: #181818
+  ),
+  ownIt: (
+    main: #c10016,
+    dark: #880000,
+    light: #fb4d3f,
+    contrastText: #ffffff,
+    paper: #f6f6f6,
+    contrastPaperText: #181818,
+  ),
+  valentino: (
+    main: #4e1214,
+    dark: #2c0000,
+    light: #7e3c3a,
+    contrastText: #ffffff,
+    paper: #f6f6f6,
+    contrastPaperText: #4e1214
+  ),
+  cann: (
+    main: #ecd2e1,
+    dark: #baa1af,
+    light: #ffffff,
+    contrastText: #00a6c7,
+    paper: #f6f6f6,
+    contrastPaperText: #00a6c7
+  ),
+  bumbleDate: (
+    main: #F8CB5E,
+    dark: #c29a2d,
+    light: #fffe8e,
+    contrastText: #ffffff,
+    paper: #f6f6f6,
+    contrastPaperText: #201e1f
+  ),
+  bumbleBizz: (
+    main: #ee7547,
+    dark: #b6461c,
+    light: #ffa674,
+    contrastText: #201e1f,
+    paper: #f6f6f6,
+    contrastPaperText: #201e1f
+  ),
+  bumbleBFF: (
+    main: #4098bc,
+    dark: #006a8c,
+    light: #77c9ef,
+    contrastText: #201e1f,
+    paper: #f6f6f6,
+    contrastPaperText: #201e1f
+  )
+);
+
+// Fn to retrieve CSS variables
+// Ref: https://codepen.io/jakealbaugh/post/css4-variables-and-sass
+
+@function palette($color-name, $color-variant: null, $true-val: false) {
+  @if ($true-val == true) {
+    @if ($color-variant != null) {
+      @return map-get(map-get($light-colors, $color-name), $color-variant);
+    } @else {
+      @return map-get($colors, $color-name);
+    }
+  } @else {
+    @if ($color-variant != null) {
+      @return var(--#{$color-name}-#{$color-variant});
+    } @else {
+      @return var(--#{$color-name});
+    }
+  }
+};
+
+// Media queries
+
+$breakpoints: (
+  xs: 0px,
+  sm: 600px,
+  md: 900px,
+  lg: 1200px,
+  xl: 1536px
+);
+
+@mixin bp-down($bp) {
+  @media all and (max-width: map-get($breakpoints, $bp)) {
+    @content
+  };
+};
+
+@mixin bp-up($bp) {
+  @media all and (min-width: map-get($breakpoints, $bp)) {
+    @content
+  };
+};
+
+@mixin bp-in($lower-bp, $upper-bp) {
+  @media all and (min-width: map-get($breakpoints, $lower-bp)) and (max-width: map-get($breakpoints, $upper-bp)) {
+    @content
+  };
+};
+
+// Spacing
+
+@function spacing($top, $right: null, $bottom: null, $left: null) {
+  $step: 4px;
+  @if $right  == null and $bottom == null and $left == null { @return $top * $step };
+  @if $left   == null { $left:   $right };
+  @if $bottom == null { $bottom: $top   };
+  @if $right  == null { $right:  $top   };
+  @return $top * $step $right * $step $bottom * $step $left * $step;
+};
+
+// @keyframes slide-out-down {
+//   0% { transform: translate(0,0) };
+//   100% { transform: translate(0,-100%)};
+// }
+
+// @keyframes slide-in-down {
+//   0% { transform: translate(0,-100%) };
+//   100% { transform: translate(0,0) };
+// }
+
+// @keyframes slide-in-right {
+//   0% { 
+//     transform: translate(-100%, 0);
+//   };
+//   100% { 
+//     transform: translate(0, 0);
+//   };
+// }
+
+// @keyframes slide-out-left {
+//   0% { 
+//     transform: translate(0,0);
+//   };
+//   100% { 
+//     transform: translate(-100%, 0);
+//   };
+// }

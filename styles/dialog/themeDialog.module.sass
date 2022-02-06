@@ -1,0 +1,51 @@
+@import '../theme'
+
+.themes
+  display: grid
+  grid-template-columns: repeat(4, max-content)
+  row-gap: spacing(1)
+  align-items: center
+  padding: spacing(6,2)
+  justify-content: center
+
+.theme
+  display: contents
+  @extend %uppercase
+  cursor: pointer
+
+  .nameDiv
+    display: flex
+    cursor: pointer
+    padding: spacing(1, 4, 1, 2)
+
+  .name
+    width: max-content
+    text-transform: uppercase
+    font-weight: map-get($typography, fontWeight, bold)
+    font-size: 0.9rem
+    // Offset for ::after line
+    transform: translateY(2px)
+
+    &::after
+      content: ''
+      display: block
+      border-bottom: solid 2px
+      transform: scaleX(0),
+      transform-origin: 0% 50%
+      transition: transform 250ms ease-in-out
+
+  &:hover .name::after
+    transform: scaleX(1)
+
+  .tick
+    font-size: 1rem
+
+@each $theme, $map in $card-themes 
+  .norm-#{$theme}
+    padding: spacing(1, 2)
+    background: map-get($map, 'paper')
+    color: map-get($map, 'contrastPaperText')
+  .wild-#{$theme}
+    padding: spacing(1, 2)
+    background: map-get($map, 'main')
+    color: map-get($map, 'contrastText')

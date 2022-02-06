@@ -1,0 +1,21 @@
+{
+  "general": "Pick a card.\n Read it out loud to your partner(s) and listen to their answer.",
+  "levels": {
+    "level_one": {
+      "label": "Level 1 - Perception",
+      "content": "This level is about gaining perspective on what first impressions we give off and challenging the assumptions we make about others."
+    },
+    "level_two": {
+      "label": "Level 2 - Connection",
+      "content": "This round is about asking the rarely asked questions and connecting on a deeper level."
+    },
+    "level_three": {
+      "label": "Level 3 - Reflection",
+      "content": "Time to reflect on your game experience."
+    },
+    "wildcard": {
+      "label": "Wildcard",
+      "content": "If you draw a wildcard, your partner must complete the instructions unless otherwise stated."
+    }
+  }
+}

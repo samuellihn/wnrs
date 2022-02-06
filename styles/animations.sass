@@ -1,0 +1,47 @@
+// Drop
+  
+.drop-enter
+  opacity: 0.2
+  transform: translateY(-100%)
+
+.drop-exit
+  opacity: 1
+  transform: translateY(0%)
+
+.drop-enter-active
+  opacity: 1
+  transform: translateY(0%)
+
+.drop-exit-active
+  opacity: 0
+  transform: translateY(-100%)
+
+.drop-enter-active, .drop-exit-active
+  transition: opacity 500ms, transform 500ms
+
+// Fade
+
+.fade-enter
+  opacity: 0
+  transform: translateX(100%)
+
+.fade-exit
+  opacity: 1
+  transform: translateX(0%)
+
+.fade-enter-active
+  opacity: 1
+  transform: translateX(0%)
+
+.fade-exit-active
+  opacity: 0
+  transform: translateX(-100%)
+
+.fade-exit-right-active
+  opacity: 0
+  transform: translateX(100%)
+
+.fade-enter-active, .fade-exit-active, .fade-exit-right-active
+  transition: opacity 500ms, transform 500ms
+
+// Fade

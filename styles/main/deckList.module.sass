@@ -1,0 +1,59 @@
+@import '../theme'
+
+$columns: 5
+
+.root
+  display: grid
+  grid-template-columns: repeat($columns, max-content)
+  align-items: center
+  
+  .empty
+    width: 1rem
+    margin-left: spacing(2)
+
+  .category
+    @extend %overline
+    margin: spacing(2, 0)
+    grid-column: span $columns
+
+  .nameDiv
+    display: flex
+    cursor: pointer
+    padding: spacing(1, 4, 1, 2)
+
+    .name
+      width: max-content
+      text-transform: uppercase
+      font-weight: map-get($typography, fontWeight, bold)
+      font-size: 0.9rem
+      // Offset for ::after line
+      transform: translateY(2px)
+
+      &::after
+        content: ''
+        display: block
+        border-bottom: solid 2px
+        transform: scaleX(0),
+        transform-origin: 0% 50%
+        transition: transform 250ms ease-in-out
+
+    &:hover .name::after
+      transform: scaleX(1)
+
+  .infoButton
+    margin-right: spacing(2)
+    font-size: 1rem
+
+  .infoIcon  
+    font-size: 1rem
+
+  .icon
+    opacity: 0.8
+    font-size: 1.25rem
+    margin-right: spacing(2)
+
+  .tick
+    font-size: 1rem
+    margin-left: spacing(2)
+
+

@@ -1,0 +1,131 @@
+@import '../theme'
+@import '../animations'
+
+$window-width: 400px
+
+%padded
+  margin: spacing(4, 0)
+  padding: spacing(0, 4)
+
+.startRoot
+  height: 100%
+  background: palette(theme, paper)
+  color: palette(theme, contrastPaperText)
+  display: flex
+  overflow: hidden
+  align-items: center
+  transition: background 500ms ease-in
+
+  &.fadeToWhite
+    background: palette(theme, main)
+
+.inner
+  height: clamp(0px, 100%, 900px)
+  width:  clamp(0px, 100%, 400px)
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  .content
+    width: 100%
+    min-height: 0
+    display: flex
+    flex-direction: column
+    flex: 0 1 auto
+    gap: spacing(4)
+    
+  .gameName
+    @extend %uppercase
+    padding: spacing(0, 4, 0, 8)
+    padding-left: spacing(8)
+    font-size: 2rem
+    letter-spacing: 0.5px
+    white-space: pre-line
+
+  .gameDesc
+    color: palette(text, primary)
+    padding: spacing(0, 4, 0, 8)
+
+  .modes
+    @extend %padded
+    margin: spacing(0, 0, 6)
+
+    .mode
+      display: flex
+      align-items: center
+      @extend %uppercase
+      letter-spacing: 0.25px
+      padding: spacing(2, 0)
+      cursor: pointer
+      transition: opacity 200ms ease-in-out
+
+      &.hide
+        opacity: 0.4
+
+      .arrow
+        opacity: 0
+        transform: translateX(-100%)
+        transition: transform 200ms ease-in-out, opacity 200ms ease-in-out
+        font-size: 1rem
+
+      &:hover .arrow
+        opacity: 1
+        transform: translateX(0)
+
+  .title
+    @extend %uppercase
+    font-size: 1.25rem
+    background: palette(theme, main)
+    color: palette(theme, contrastText)
+    padding: spacing(2, 4)
+    margin: spacing(4, 4, 0)
+
+  .description
+    margin: spacing(0, 4)
+    color: palette(text, primary)
+
+  .list
+    padding: spacing(0, 4)
+    flex: 0 1 auto
+    overflow-y: auto
+
+  .nameForm
+    padding: spacing(0, 4)
+
+  .nav
+    display: flex
+    justify-content: space-between
+    @extend %uppercase
+    @extend %padded
+    
+    > button
+      background: palette(theme, main)
+      padding: spacing(1, 2)
+      color: palette(theme, contrastText)
+      display: flex
+      align-items: center
+      position: relative
+      cursor: pointer
+      margin: 0
+
+      .arrowLeft, .arrowRight
+        position: absolute
+        font-size: 1.25rem
+        color: palette(theme, main)
+        opacity: 0
+        transition: transform 200ms ease-in-out, opacity 200ms ease-in-out
+
+      .arrowLeft
+        right: 100%
+        transform: translateX(100%)
+
+      .arrowRight
+        left: 100%
+        transform: translateX(-100%)
+
+      &:hover 
+        .arrowLeft, .arrowRight
+          opacity: 1
+          transform: translateX(0)
+

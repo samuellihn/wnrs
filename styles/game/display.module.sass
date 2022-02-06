@@ -1,0 +1,41 @@
+@import '../theme'
+@import '../animations'
+
+.root
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100%
+  overflow: hidden
+  background: palette(theme, main)
+
+.navbar
+  display: flex
+  align-items: center
+  @extend %uppercase
+  color: palette(theme, contrastText)
+  margin: spacing(4, 0)
+
+  > div
+    flex: 1
+    text-align: center
+
+.names
+  @extend %uppercase
+  color: palette(theme, contrastText)
+  text-align: center
+  margin: spacing(4, 0)
+
+.cards
+  position: relative
+  width: $card-sm-width
+  height: $card-sm-height
+
+  .card
+    position: absolute
+
+.miscBar
+  display: flex
+  justify-content: center
+  gap: spacing(2)

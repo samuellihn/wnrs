@@ -1,0 +1,49 @@
+@use 'sass:math'
+@import '../theme'
+
+.root
+  justify-content: center
+  align-items: center
+  display: inline-flex
+  padding: spacing(1)
+  opacity: 0.8
+  cursor: pointer
+  border-radius: $border-radius
+  font-size: 0.85rem
+  width: max-content
+  height: max-content
+
+  &.border
+    background-color: inherit
+
+    &:hover
+      background-color: palette(action, hover)
+
+  &.themed
+    color: palette(theme, contrastText)
+    opacity: 0.8
+
+  &:hover
+    opacity: 1
+
+  &.selected
+    opacity: 1
+    background-color: palette(action, select) !important
+
+  &.contained
+    background-color: palette(theme, main)
+    color: palette(theme, contrastText)
+    
+    &:hover
+      background-color: darken(palette(theme, main, true), 0.05)
+
+  &.outlined
+    border: 1px solid palette('misc, divider')
+
+  &.disabled
+    cursor: default
+    pointer-events: none
+    opacity: 0.2
+
+.fullWidth
+  width: 100%

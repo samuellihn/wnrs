@@ -1,0 +1,59 @@
+@import '../theme'
+
+.root
+  width: $card-sm-width
+  height: $card-sm-height
+  text-transform: uppercase
+  border-radius: 55px
+  padding: spacing(2)
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)
+
+  @each $theme, $map in $card-themes 
+    &.norm-#{$theme}
+      background: map-get($map, 'paper')
+      color: map-get($map, 'contrastPaperText')
+    &.wild-#{$theme}
+      background: map-get($map, 'main')
+      color: map-get($map, 'contrastText')
+
+.inner
+  height: 100%
+  width: 100%
+  display: grid
+  justify-content: stretch
+  grid-template-rows: minmax(max-content, 1fr) auto auto minmax(max-content,1fr)
+  text-align: center
+  white-space: pre-line
+  font-size: 0.9rem
+  font-weight: map-get($typography, fontWeight, bold)
+
+  .empty, .wildcardLabel, .normal, .wildcard, .footer
+    grid-column: span 2
+    
+  .reminderLabel, .normal, .reminder
+    grid-row: span 2
+
+  .wildcardLabel
+    margin-bottom: spacing(2)
+
+  .reminderLabel
+    margin-right: spacing(4)
+    align-self: center
+    justify-self: right
+
+  .reminder
+    text-align: left
+    justify-self: left
+
+  .footer
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    gap: spacing(1)
+
+    .crossover
+      font-size: 0.625rem
+
+    .edition
+      font-size: 0.525rem

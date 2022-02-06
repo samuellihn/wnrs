@@ -1,0 +1,33 @@
+@import '../theme'
+
+.section + .section
+  margin-top: spacing(2)
+
+.title
+  @extend %overline
+  margin-bottom: spacing(2)
+
+.preview
+  padding: spacing(3)
+  background: palette(theme, dark)
+  border-radius: $border-radius
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .content
+    flex: 1
+    text-align: center
+    @extend %uppercase
+    font-size: .9rem
+    word-break: break-word
+
+.links
+  display: flex
+  gap: spacing(2)
+  justify-content: center
+  padding: spacing(4)
+
+.footer
+  text-align: center
+  font-size: 0.7rem

@@ -1,0 +1,53 @@
+@import '../theme'
+@import '../animations'
+
+.backdrop
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: map-get($z-index, dialog)
+  background-color: rgba(0, 0, 0, .6)
+
+.inner
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  
+.root 
+  width: clamp(300px, 400px, 95%)
+  position: relative
+  max-height: calc(var(--app-height, 100vh) - spacing(4))
+  min-height: 50px
+  margin: spacing(2)
+  background-color: palette(theme, main)
+  color: palette(theme, contrastText)
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+
+  // &::after
+  //   content: ""
+  //   position: absolute
+  //   width: 100%
+  //   height: 100%
+  //   top: 0
+  //   left: 0
+  //   background: linear-gradient(2deg, rgba(255,255,255,0), 50%, palette(theme, dark), 51%, rgba(255,255,255,0))
+
+.title
+  text-align: center
+  padding: spacing(4)
+  @extend %uppercase
+  font-size: 1.1rem
+  border-bottom: 1px solid palette(misc, divider)
+
+.content
+  padding: spacing(4)
+
+.close
+  position: absolute
+  top: spacing(2.5)
+  right: spacing(3)
+  cursor: pointer
+  color: palette(theme, constrastText)
