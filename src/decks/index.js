@@ -15,6 +15,7 @@ module.exports = {
     quarantine:       require('./online/quarantine'),
     raceAndPrivilege: require('./online/raceAndPrivilege'),
     voting:           require('./online/voting'),
+    sneaky:           require('./online/sneaky'),
 
     bumbleDate:       require('./crossover/bumbleDate'),
     bumbleBFF:        require('./crossover/bumbleBFF'),

@@ -71,7 +71,7 @@ export default function Card({ className, content, meta }) {
 
         <div className={styles.footer}>
           <div className={styles.crossover}>
-            We&apos;re Not Really Strangers
+            {!meta.noWNRS && `We're Not Really Strangers`}
             {meta.crossover !== undefined &&
               `\xa0\xa0 X \xa0\xa0${meta.crossover}`}
           </div>

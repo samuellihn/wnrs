@@ -9,11 +9,11 @@ import { CSSTransition, SwitchTransition, TransitionGroup } from "react-transiti
 import { MiscBar, NavBar } from "@components/game"
 
 const embedMeta = deck => {
-  const { theme, crossover, edition } = deck
+  const { theme, crossover, edition, noWNRS } = deck
   return deck.questions.map(level => {
     return level.map(question => ({ 
       question, 
-      meta: { theme, crossover, edition }
+      meta: { theme, crossover, edition, noWNRS }
     }))
   })
 }
@@ -35,7 +35,7 @@ export default function Display() {
       if (!val) return acc
       const currQuestions = embedMeta(DECKS[slug])
       if (acc.length === 0) return currQuestions
-      // Push questions into respective levels, TODO: currQuestions level > acc
+      // Push questions into respective levels
       return acc.map((level, idx) => [...level, ...currQuestions[idx] ?? []])
     }, [])
   })()
