@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { Reddit, GitHub, Cafe } from '@components/icons'
 import metadata from "@src/util/metadata.json"
+import { getAnalytics, logEvent } from 'firebase/analytics'
 
 const links = [{
   icon: <Reddit/>,
@@ -14,7 +15,7 @@ const links = [{
 }, {
   icon: <GitHub/>,
   label: 'GitHub',
-  link: "https://github.com/jonathan-lph/wnrs",
+  link: "https://github.com/jonathan-lph/wnrs/tree/v2",
 }, {
   icon: <Cafe/>,
   label: 'Tip Jar',
@@ -41,11 +42,17 @@ export default function LinkDialog(props) {
     navigator.clipboard.writeText(content)
     const temp = [...copied]
     temp[idx] = true
+    logEvent(getAnalytics(), `share_copy`, { type: sections()[idx].label })
     setCopied(temp)
     setTimeout(() => {
       temp[idx] = false
       setCopied([...temp])
     }, 2000)
+  }
+
+  const handleOpenLink = (link, label) => e => {
+    logEvent(getAnalytics(), `link_${label}`)
+    window.open(link)
   }
 
   if (typeof location === 'undefined') return null
@@ -72,7 +79,7 @@ export default function LinkDialog(props) {
 
       <div className={styles.links}> 
         {links.map(({icon, label, link}) =>
-          <Button key={label} onClick={() => window.open(link)}>
+          <Button key={label} onClick={handleOpenLink(link, label)}>
             {icon}
           </Button>
         )}
@@ -83,9 +90,12 @@ export default function LinkDialog(props) {
         <a href="https://github.com/jonathan-lph" rel="noreferrer" target="_blank">
           {metadata.developer}
         </a>
-        {` - v${metadata.version}`}
+        {` - `}
+        <a href="https://docs.google.com/document/d/1LrcuAy6t8woynvdQSc9wKWoyLY3aSGbcJCYH-9l-qBw/edit?usp=sharing" rel="noreferrer" target="_blank">
+          Privacy Policy
+        </a>
         <br/>
-        {metadata.copyright}
+        {`v${metadata.version} - ${metadata.copyright}`}
       </footer>
 
     </Dialog>

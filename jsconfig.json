@@ -9,6 +9,7 @@
       "@util/*": ["src/util/*"],
       "@styles/*": ["styles/*"],
       "@public/*": ["public/*"],
+      "@firebaseApp": ["firebase"]
     }
   }
 }

@@ -9,6 +9,7 @@ import { ArrowLeft, ArrowRight } from "@src/components/icons"
 import { decodeDecks, encodeDecks } from "@src/util/helperFn"
 
 import styles from "@styles/main/main.module.sass"
+import { getAnalytics, logEvent } from "firebase/analytics"
 
 const validateSeed = str => {
   const arr = str.split('-')
@@ -78,17 +79,24 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (step === 4) 
-    setTimeout(() => {
-      router.push({
-        pathname: '/game',
-        query: {
-          decks: encodeDecks(input.decks),
-          seed: input.seed ? input.seed : new Date().toLocaleDateString('sv'),
-          ...(input.names.length !== 1 && { names: input.names.slice(0, -1).join(',') })
-        }
+    if (step === 4) {
+      const _encodedDecks = encodeDecks(input.decks)
+      logEvent(getAnalytics(), 'game_start', { 
+        mode: input.mode, 
+        deck: _encodedDecks, 
+        players: input.names.length 
       })
-    }, 500)
+      setTimeout(() => {
+        router.push({
+          pathname: '/game',
+          query: {
+            decks: _encodedDecks,
+            seed: input.seed ? input.seed : new Date().toLocaleDateString('sv'),
+            ...(input.names.length !== 1 && { names: input.names.slice(0, -1).join(',') })
+          }
+        })
+      }, 500)
+    }
   }, [step])
 
   return (

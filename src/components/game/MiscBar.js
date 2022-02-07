@@ -3,6 +3,7 @@ import { Button } from "@components/common"
 import { Link, Palette, Help, Expansion, Copy, Tick } from "@components/icons"
 import { LinkDialog, DeckDialog, HelpDialog, ThemeDialog } from "@components/dialog"
 import { useState } from "react"
+import { getAnalytics, logEvent } from "firebase/analytics"
 
 const buttons = [{
   icon: <Help/>,
@@ -32,7 +33,10 @@ export default function MiscBar({ question, className }) {
   })
   const [copied, setCopied] = useState(false)
 
-  const handleOpen  = type => e => setOpen({...open, [type]: true})
+  const handleOpen  = type => e => {
+    logEvent(getAnalytics(), `dialog_${type}`)
+    setOpen({...open, [type]: true})
+  }
   const handleClose = type => e => setOpen({...open, [type]: false})
   
   const handleCopy = e => {
@@ -40,6 +44,7 @@ export default function MiscBar({ question, className }) {
     const _ownItRegex = new RegExp('\\[([^\\]]+)\\]\\(([^)]+)\\)', 'g')
     _question = _question.replaceAll(_ownItRegex, (match, p1, p2) => p2)
     navigator.clipboard.writeText(_question)
+    logEvent(getAnalytics(), 'question_copy')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
