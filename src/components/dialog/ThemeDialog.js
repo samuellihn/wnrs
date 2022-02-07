@@ -20,7 +20,11 @@ export default function ThemeDialog(props) {
     >
       <div className={styles.themes}>
         {themes.map(({short_name, theme : _theme}) => 
-          <div className={styles.theme} onClick={toggleTheme(_theme)}>
+          <div 
+            key={short_name} 
+            className={styles.theme} 
+            onClick={toggleTheme(_theme)}
+          >
             {_theme === theme
               ? <Tick className={styles.tick}/>
               : <div className={styles.empty}/>

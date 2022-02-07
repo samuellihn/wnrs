@@ -111,7 +111,7 @@ export default function Home() {
               {step === 0 &&
                 <>
                   <h1 className={styles.gameName}>
-                    We're Not<br/>
+                    We&apos;re Not<br/>
                     Really<br/>
                     Strangers
                   </h1>
@@ -139,7 +139,7 @@ export default function Home() {
                     Decks
                   </h2>
                   <div className={styles.description}>
-                    Don't worry. You may change this later.
+                    Don&apos;t worry. You may change this later.
                   </div>
                   <DeckList 
                     className={styles.list} 

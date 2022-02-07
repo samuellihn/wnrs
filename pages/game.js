@@ -55,7 +55,7 @@ export default function Display() {
     <div className={styles.inner}>
       {names &&
         <div className={styles.names}>
-          {names[card % names.length]}'s Turn
+          {`${names[card % names.length]}'s Turn`}
         </div>
       }
       <SwitchTransition>
