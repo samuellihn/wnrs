@@ -3,7 +3,6 @@
   "version": "2.0.1",
   "developer": "jonathan-lph",
   "copyright": "© We're Not Really Strangers",
-  "privacyPolicy": "https://docs.google.com/document/d/1LrcuAy6t8woynvdQSc9wKWoyLY3aSGbcJCYH-9l-qBw/edit?usp=sharing",
   "document": {
     "description": "Play We're Not Really Strangers online and start connecting with people. All published decks are available!",
     "author": "jonathan-lph",
@@ -22,13 +21,13 @@
     "type": "website",
     "title":"We're Not Really Strangers Online",
     "description": "Play We're Not Really Strangers online and start connecting with people. All published decks are available!",
-    "url": "",
-    "image": ""
+    "url": "https://wnrs.jonathanl.dev",
+    "image": "https://wnrs.jonathanl.dev/banner.png"
   },
   "twitter": {
     "card": "summary_large_image",
     "title": "We're Not Really Strangers Online",
     "description": "Play We're Not Really Strangers online and start connecting with people. All published decks are available!",
-    "image": ""
+    "image": "https://wnrs.jonathanl.dev/banner.png"
   }
 }
