@@ -2,7 +2,9 @@
 
 Play WNRS online at [wnrs.jonathanl.dev](https://wnrs.jonathanl.dev). No ads. No profits. No downloads.
 
-Revamped from version 1. Now support names, themes, and deck synchronization (seeded rng).
+### Version 2
+
+Revamped! Now support names, themes, and deck synchronization (seeded rng).
 
 ### Source
 
@@ -30,7 +32,7 @@ Get wild!
 - Quarantine Edition (Online PDF version)
 - [Race and Privilege Edition (Online PDF version)](https://drive.google.com/file/d/1nNqIKv7wa4f3EYHCcXkutoznRx6qDDaz/view)
 - Voting Edition (Online PDF version)
-- [WNRS x Bumble Expansion Pack](https://bumble.com/en/the-buzz/wnrs-card-game) (individual links died)
+- [WNRS x Bumble Expansion Pack](https://bumble.com/en/the-buzz/wnrs-card-game)
   - [DEAD] [Bumble Date](https://dl.dropboxusercontent.com//s/vk4u4zc3i7gmsvf/WNRS_Date%20Cards.pdf?dl=0)
   - [DEAD] [Bumble BFF](https://dl.dropboxusercontent.com/s/9238tjyf204ly3i/WNRS_BFF%20Cards.pdf)
   - [DEAD] [Bumble Bizz](https://dl.dropboxusercontent.com/s/o6tzq56xlql5osx/WNRS_Bizz%20Cards.pdf?dl=0)
@@ -40,8 +42,7 @@ Get wild!
 
 ### Missing Decks
 
-Decks have stopped updating since v1 is discontinued. Feel free to submit a ticket if you have these versions.
-
+Decks had stopped updating since v1 was discontinued. Feel free to submit a ticket if you have these versions.
 
 - New Years Edition
 - Friendship Edition
@@ -54,7 +55,7 @@ Decks have stopped updating since v1 is discontinued. Feel free to submit a tick
 
 Thanks to various sources to make this possible:
 
-- [DEAD] [werenotreallystrangers.online](https://www.werenotreallystrangers.online/) (link dead)
+- [DEAD] [werenotreallystrangers.online](https://www.werenotreallystrangers.online/)
 - [DEAD] [Relationship Exapnsion Pack PDF](https://dochub.com/roughunderscoreoutlines/ok2BPdERPa9DGDBKAxpLrN/relationship-wnrs-pdf?dt=AXuCHZr9L4ypEGKbqj8z)
 - [DEAD] [Honest Dating Expansion Pack PDF](https://dochub.com/roughunderscoreoutlines/r4D6EkZVZZp2mNBVpQXW7O/honest-dating-wnrs-3-pdf?dt=LjiqJAQd6CRamnAoMbew)
 - [DEAD] [Self-reflection Edition PDF](https://dochub.com/roughunderscoreoutlines/8adOrbPVQgljYnBR24Mj7D/self-reflection-wnrs-3-pdf?dt=Z44EAc2EzxcF7YquWmdg)
