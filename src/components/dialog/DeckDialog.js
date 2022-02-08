@@ -1,12 +1,12 @@
 import { Button } from '@components/common'
 import { Dialog } from '@components/dialog'
 import { DeckList } from '@components/main'
-import { encodeDecks, decodeDecks } from '@src/util/helperFn'
+import { encodeDecks, decodeDecks, getRawQuestion } from '@src/util/helperFn'
 import styles from "@styles/dialog/deckDialog.module.sass"
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import * as DECKS from "@src/decks"
-import { ArrowLeft } from "@components/icons"
+import { ArrowLeft, Download } from "@components/icons"
 import { SwitchTransition, CSSTransition } from 'react-transition-group'
 import clsx from 'clsx'
 import { getAnalytics, logEvent } from 'firebase/analytics'
@@ -31,6 +31,35 @@ export default function DeckDialog(props) {
     setInfo(slug)
   }
   const handleBack = e => setInfo(null)
+
+  const handleDownload = e => {
+    const normalizeList = (attr) => {
+      if (!DECKS[info][attr]) return ''
+      return DECKS[info][attr]
+        .map(line =>`${getRawQuestion(line)}`)
+        .join('\n') 
+        + '\n\n'
+    }
+    let str = ''
+    str += getRawQuestion(DECKS[info].name) + '\n\n'
+    str += normalizeList('backDesc')
+    str += '----------\n\n'
+    str += normalizeList('preview')
+    str += normalizeList('instruction')
+    str += normalizeList('')
+    str += '----------\n'
+    DECKS[info].levels.forEach((level, idx) => {
+      str += `\n${level.toUpperCase()}\n==========\n\n`
+      str += DECKS[info].questions[idx].map(q => `${getRawQuestion(q)}`).join('\n') + '\n'
+    })
+    const elem = document.createElement('a')
+    elem.setAttribute('href', 'data:text/plain;charset=utf-8,' + str)
+    elem.setAttribute('download', `${getRawQuestion(DECKS[info].name).split(' ').join('_')}.txt`)
+    elem.style.display = 'none'
+    document.body.appendChild(elem)
+    elem.click()
+    document.body.removeChild(elem)
+  }
   
   useEffect(() => {
     setInfo(null)
@@ -87,6 +116,13 @@ export default function DeckDialog(props) {
                   </p>
                 }
               </div>
+              <Button 
+                disableBackground
+                className={styles.download}
+                onClick={handleDownload} 
+              >
+                <Download/>
+              </Button>
             </div>
           }
         </CSSTransition>

@@ -33,3 +33,9 @@ export const decodeDecks = (dec) => {
       [deck]: onehot[onehot.length - idx - 1] === '1'
     }), {})
 }
+
+export const getRawQuestion = question => {
+  const _question = question.replaceAll('\n', '')
+  const _ownItRegex = new RegExp('\\[([^\\]]+)\\]\\(([^)]+)\\)', 'g')
+  return _question.replaceAll(_ownItRegex, (match, p1, p2) => p2)
+}
