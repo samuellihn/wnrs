@@ -15,6 +15,7 @@ $window-width: 400px
   overflow: hidden
   align-items: center
   transition: background 500ms ease-in
+  padding: spacing(2)
 
   &.fadeToWhite
     background: palette(theme, main)
@@ -46,6 +47,7 @@ $window-width: 400px
   .gameDesc
     color: palette(text, primary)
     padding: spacing(0, 4, 0, 8)
+    font-size: 0.8rem
 
   .modes
     @extend %padded
@@ -79,7 +81,7 @@ $window-width: 400px
     background: palette(theme, main)
     color: palette(theme, contrastText)
     padding: spacing(2, 4)
-    margin: spacing(4, 4, 0)
+    margin: spacing(2, 4, 0)
 
   .description
     margin: spacing(0, 4)

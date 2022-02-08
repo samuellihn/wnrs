@@ -1,6 +1,19 @@
 import { getAnalytics, logEvent } from 'firebase/analytics'
 import { createContext, useContext, useEffect, useState } from 'react'
 
+const themes = {
+  main: '#c10016',
+  selfLove: '#efc5c3',
+  voting: '#272c6c0',
+  race: '#181818',
+  ownIt: '#c10016',
+  valentino: '#4e1214',
+  cann: '#ecd2e1',
+  bumbleDate: '#F8CB5E',
+  bumbleBizz: '#ee7547',
+  bumbleBFF: '#4098bc'
+}
+
 const ThemeContext = createContext()
 
 export const useTheme = () => useContext(ThemeContext)
@@ -28,6 +41,7 @@ export function ThemeProvider({ children }) {
   return (
     <ThemeContext.Provider value={{
       theme,
+      themeColor: themes[theme],
       toggleTheme,
     }}>
       <div id="themed-app" data-theme={theme}>

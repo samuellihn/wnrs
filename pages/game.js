@@ -7,6 +7,8 @@ import { Card } from "@components/common"
 import styles from "@styles/game/display.module.sass"
 import { CSSTransition, SwitchTransition, TransitionGroup } from "react-transition-group"
 import { MiscBar, NavBar } from "@components/game"
+import Head from "next/head"
+import { useTheme } from "@src/context/ThemeContext"
 
 const embedMeta = deck => {
   const { theme, crossover, edition, noWNRS } = deck
@@ -20,6 +22,7 @@ const embedMeta = deck => {
 
 export default function Display() {
   const router = useRouter()
+  const { themeColor } = useTheme()
   const [level, setLevel] = useState(0)
   const [card, setCard] = useState(0)
  
@@ -49,8 +52,17 @@ export default function Display() {
       router.replace('/', '/')
   }, [router])
 
+  useEffect(() => {
+    document.body.style = ""
+  }, [])
+
   if (!router.query?.decks || !router.query?.seed) return null
-  return (
+  return (<>
+  
+    <Head>
+      <meta name="theme-color" content={themeColor}/>
+    </Head>
+  
     <main className={styles.root}>
     <div className={styles.inner}>
       {names &&
@@ -110,5 +122,6 @@ export default function Display() {
       />
     </div>
     </main>
-  )
+  
+  </>)
 }

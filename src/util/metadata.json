@@ -1,10 +1,10 @@
 {
   "title": "We're Not Really Strangers Online",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "developer": "jonathan-lph",
   "copyright": "© We're Not Really Strangers",
   "document": {
-    "description": "Play We're Not Really Strangers online and start connecting with people. All published decks are available!",
+    "description": "Play We're Not Really Strangers online and start connecting with people. Most of all published decks are available!",
     "author": "jonathan-lph",
     "keywords": "WNRS, werenotreallystrangers",
     "theme-color": "#c10016",
@@ -14,20 +14,20 @@
   },
   "link": {
     "icon": "/favicon.ico",
-    "apole-touch-icon": "/logo180.png",
+    "apple-touch-icon": "/logos/logo180.png",
     "manifest": "/manifest.json"
   },
   "og": {
     "type": "website",
     "title":"We're Not Really Strangers Online",
-    "description": "Play We're Not Really Strangers online and start connecting with people. All published decks are available!",
+    "description": "Play We're Not Really Strangers online and start connecting with people. Most of all published decks are available!",
     "url": "https://wnrs.jonathanl.dev",
     "image": "https://wnrs.jonathanl.dev/banner.png"
   },
   "twitter": {
     "card": "summary_large_image",
     "title": "We're Not Really Strangers Online",
-    "description": "Play We're Not Really Strangers online and start connecting with people. All published decks are available!",
+    "description": "Play We're Not Really Strangers online and start connecting with people. Most of all published decks are available!",
     "image": "https://wnrs.jonathanl.dev/banner.png"
   }
 }

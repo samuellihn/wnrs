@@ -10,6 +10,8 @@ import { decodeDecks, encodeDecks } from "@src/util/helperFn"
 
 import styles from "@styles/main/main.module.sass"
 import { getAnalytics, logEvent } from "firebase/analytics"
+import Head from "next/head"
+import { useTheme } from "@src/context/ThemeContext"
 
 const validateSeed = str => {
   const arr = str.split('-')
@@ -32,6 +34,9 @@ const validateSeed = str => {
 
 export default function Home() {
 
+  const router = useRouter()
+  const { themeColor } = useTheme()
+
   const [input, setInput] = useState({
     mode:  null,
     seed:  '',
@@ -40,7 +45,6 @@ export default function Home() {
   })
   const [step, setStep] = useState(0)
   const [error, setError] = useState(null)
-  const router = useRouter()
 
   const handleSelectMode = mode => e => {
     setInput({...input, mode})
@@ -99,7 +103,17 @@ export default function Home() {
     }
   }, [step])
 
-  return (
+  useEffect(() => {
+    document.body.style.background = "var(--theme-paper)"
+    document.body.style.color = "var(--theme-contrastPaperText)"
+  }, [])
+
+  return (<>
+  
+    <Head>
+      <meta name="theme-color" content={themeColor}/>
+    </Head>
+  
     <main className={clsx(styles.startRoot, step === 4 && styles.fadeToWhite)}>
       <div className={clsx(styles.inner)}>
 
@@ -179,7 +193,12 @@ export default function Home() {
                     Feeling may arise.<br/>
                   </h1>
                   <p className={styles.gameDesc}>
-                    To proceed, you understand this application is <strong>not</strong> affliated with the official WNRS.
+                    To proceed, you understand this application is <strong>not</strong> affliated with the official WNRS and agree with this app&apos;s{' '}
+                    <a href="https://docs.google.com/document/d/1LrcuAy6t8woynvdQSc9wKWoyLY3aSGbcJCYH-9l-qBw/edit?usp=sharing" rel="noreferrer" target="_blank">
+                      Privacy Policy
+                    </a>.
+                    <br/><br/>
+                    Add this app to your homepage for offline support.
                   </p>
                   <div className={styles.modes}>
                     <div
@@ -234,5 +253,5 @@ export default function Home() {
 
       </div>
     </main>
-  )
+  </>)
 }
