@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import clsx from "clsx"
 import { useRouter } from "next/router"
 import { CSSTransition, SwitchTransition } from "react-transition-group"
@@ -45,6 +45,7 @@ export default function Home() {
   })
   const [step, setStep] = useState(0)
   const [error, setError] = useState(null)
+  const mainRef = useRef()
 
   const handleSelectMode = mode => e => {
     setInput({...input, mode})
@@ -133,7 +134,7 @@ export default function Home() {
               exitActive: styles['fade-exit-active']
             }}
           >
-            <div className={styles.content}>
+            <div className={styles.content} ref={mainRef}>
               {step === 0 &&
                 <>
                   <h1 className={styles.gameName}>
@@ -229,8 +230,8 @@ export default function Home() {
         {/* Nav Component */}
         <SwitchTransition>
           <CSSTransition
-            key={step > 0 && step < 3}
-            addEndListener={(node, done) => node.addEventListener("transitionend", done, false)}
+            key={step}
+            addEndListener={(node, done) => mainRef.current.addEventListener("transitionend", done, false)}
             classNames={{
               enter: styles['fade-enter'],
               enterActive: styles['fade-enter-active'],
