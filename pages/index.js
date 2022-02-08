@@ -84,6 +84,10 @@ export default function Home() {
 
   useEffect(() => {
     if (step === 4) {
+      if (document) {
+        document.body.style.transition = "background 500ms ease-in"
+        document.body.style.background = "var(--theme-main)"
+      }
       const _encodedDecks = encodeDecks(input.decks)
       logEvent(getAnalytics(), 'game_start', { 
         mode: input.mode, 
@@ -114,8 +118,8 @@ export default function Home() {
       <meta name="theme-color" content={themeColor}/>
     </Head>
   
-    <main className={clsx(styles.startRoot, step === 4 && styles.fadeToWhite)}>
-      <div className={clsx(styles.inner)}>
+    <main className={clsx(styles.startRoot, step === 4 && styles.fadeToMain)}>
+      <div className={styles.inner}>
 
         {/* Main Component */}
         <SwitchTransition>

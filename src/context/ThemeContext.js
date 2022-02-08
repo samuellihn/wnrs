@@ -36,6 +36,7 @@ export function ThemeProvider({ children }) {
   
   useEffect(() => {
     localStorage.setItem('wnrs-theme', theme)
+    if (document) document.body.setAttribute('data-theme', theme)
   }, [theme])
 
   return (
@@ -44,7 +45,7 @@ export function ThemeProvider({ children }) {
       themeColor: themes[theme],
       toggleTheme,
     }}>
-      <div id="themed-app" data-theme={theme}>
+      <div id="themed-app">
         {children}
       </div>
     </ThemeContext.Provider>
