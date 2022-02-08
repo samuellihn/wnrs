@@ -230,7 +230,7 @@ export default function Home() {
         {/* Nav Component */}
         <SwitchTransition>
           <CSSTransition
-            key={step}
+            key={step > 0 && step < 3}
             addEndListener={(node, done) => mainRef.current.addEventListener("transitionend", done, false)}
             classNames={{
               enter: styles['fade-enter'],
