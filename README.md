@@ -39,6 +39,7 @@ Get wild!
 - WNRS x Valetino Pack (gathered from online sources)
 - WNRS x Cann Expansion Pack 
 - sneaky link edition
+- Ex-Friend edition
 
 ### Missing Decks
 

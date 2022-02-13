@@ -12,6 +12,7 @@ module.exports = {
     selfReflection:   require('./self/selfReflection'),
     selfLove:         require('./self/selfLove'),
 
+    exfriend:         require('./online/exfriend'),
     sneakyLink:       require('./online/sneaky'),
     quarantine:       require('./online/quarantine'),
     raceAndPrivilege: require('./online/raceAndPrivilege'),

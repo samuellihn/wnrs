@@ -1,0 +1,45 @@
+{
+  "name": "Ex-Friend Edition",
+  "short_name": "Ex-Friend",
+  "players": "2",
+  "theme": "main",
+  "levels": [
+      "Ex-Friend"
+  ],
+  "isExpansion": false,
+  "backDesc": [
+      "Will you be my\n friend again?",
+      "(circle one) YES NO"
+  ],
+  "preview": [
+    "Friendship make-ups are soooo awkward and intimidating. It's feels impossible to break the ice and have a meaningful conversation that leaves both sides feeling heard. Till now.",
+    "Take turns asking and answering each question. For this specific pack, we recommend that both players answer each card. Optional: have tissues and wine ready.",
+    "You may decide to mend the friendship or go your separate ways. Regardless of the outcome, you'll know you did your part."
+  ],
+  "instruction": [
+    "Things to remember while playing:",
+    "1. Avoid viewing conflict as something you can win. No one wins unless the conflict is resolved on both sides.",
+    "2. Avoid using the phrases \"you always\" or \"you never\".",
+    "3. While playing, actively look for points of agreement rather than points of division.",
+    "4. When someone shares how you've hurt their feelings, believe them. It doesn't mean you're a bad person. View it as an opportunity to grow.",
+    "5. Friendships don't need to last forever to be successful. It's okay to grow in different directions. It's okay to love each other from a distance."
+  ],
+  "questions": [[
+      "Both players explain the\n situation from the other\n person's POV to the best\n of your ability.",
+      "My part in this was _________.",
+      "Take 3 minutes to explan\n your point of view with no\n interruptions. Both players.",
+      "Wild Card Both players write down your\n most common defense mechanism\n and how it holds you back the\n most. Read out loud.",
+      "What hurt you the most?",
+      "What is one thing you wish you\n could have done differently?",
+      "Did you set any unfair\n expectations on me?",
+      "When did you feel\n most distant from me?",
+      "Finish the sentence: Something\n I'm working on is _________.",
+      "Reminder Everyone's truth\n looks different.",
+      "Was there anything you were\n going through that I didn't see?",
+      "It was very clear our friendship\n wasn't the same when _________.",
+      "When do you miss me most?",
+      "Wild Card Apologize for something\n (Big or Small).",
+      "What's a life update\n that I've missed?",
+      "What's something about out\n friendship that you don't get\n from anyone else?"
+  ]]
+}
