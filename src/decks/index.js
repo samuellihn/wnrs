@@ -12,10 +12,10 @@ module.exports = {
     selfReflection:   require('./self/selfReflection'),
     selfLove:         require('./self/selfLove'),
 
+    sneakyLink:       require('./online/sneaky'),
     quarantine:       require('./online/quarantine'),
     raceAndPrivilege: require('./online/raceAndPrivilege'),
     voting:           require('./online/voting'),
-    sneaky:           require('./online/sneaky'),
 
     bumbleDate:       require('./crossover/bumbleDate'),
     bumbleBFF:        require('./crossover/bumbleBFF'),
