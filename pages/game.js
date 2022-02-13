@@ -1,14 +1,16 @@
 import { useRouter } from "next/router"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { decodeDecks, shuffle } from "@src/util/helperFn"
 import * as DECKS from "@src/decks"
-import { Card } from "@components/common"
+import { Button, Card } from "@components/common"
 
-import styles from "@styles/game/display.module.sass"
+import styles from "@styles/game/main.module.sass"
 import { CSSTransition, SwitchTransition, TransitionGroup } from "react-transition-group"
 import { MiscBar, NavBar } from "@components/game"
 import Head from "next/head"
 import { useTheme } from "@src/context/ThemeContext"
+import { ArrowLeft } from "@src/components/icons"
 
 const embedMeta = deck => {
   const { theme, crossover, edition, noWNRS } = deck
@@ -65,6 +67,12 @@ export default function Display() {
   
     <main className={styles.root}>
     <div className={styles.inner}>
+      <Link href="/" passHref>
+        <Button themed disableBackground className={styles.home}>
+          <ArrowLeft/>
+          Main Page
+        </Button>
+      </Link>
       {names &&
         <div className={styles.names}>
           {`${names[card % names.length]}'s Turn`}
