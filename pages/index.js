@@ -203,7 +203,9 @@ export default function Home() {
                       Privacy Policy
                     </a>.
                     <br/><br/>
-                    Add this app to your homepage for offline support.
+                    <span className={styles.offline}>
+                      Add this app to your homepage for offline support.
+                    </span>
                   </p>
                   <div className={styles.modes}>
                     <div

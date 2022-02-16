@@ -23,7 +23,7 @@
 
 .home
   position: fixed
-  top: spacing(2)
+  top: calc(spacing(2) + env(safe-area-inset-top))
   left: spacing(0)
   @extend %uppercase
   padding-right: spacing(2)
