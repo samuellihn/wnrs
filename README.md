@@ -45,10 +45,12 @@ Get wild!
 
 Decks had stopped updating since v1 was discontinued. Feel free to submit a ticket if you have these versions.
 
-- New Years Edition
-- Friendship Edition
+- Couples Edition
 - Family Edition
+- Friendship Edition
 - New WNRS x Valetino Pack (Black & Gold)
+- New Years Edition
+- WNRS x HBO Max (SoSheDid) Pack
 
 ### Credits
 
