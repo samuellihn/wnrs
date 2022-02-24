@@ -7,7 +7,8 @@ export default function Card({ className, content, meta }) {
 
   const getQuestion = (question = content) => {
 
-    const _ownItRegex = new RegExp('\\[([^\\]]+)\\]\\(([^)]+)\\)', 'i')
+    const _ownItRegex = new RegExp('\\[([^\\]]+)\\]\\(([^)]+)\\)', 's')
+    const _hboRegex = new RegExp(' <(.+)>', 's')
 
     const removeTag = str => 
         isWildcard ? str.slice(10)
@@ -15,7 +16,13 @@ export default function Card({ className, content, meta }) {
       : str
 
     const result = question.match(_ownItRegex)
-    if (!result) return [removeTag(question)]
+    const hboResult = question.match(_hboRegex)
+    if (!result && !hboResult) return [removeTag(question)]
+    if (!result && hboResult) {
+      const [matched] = hboResult
+      const [_question] = question.split(matched)
+      return [removeTag(_question)]
+    }
     const [matched, color, text] = result
     const [head, foot] = question.split(matched)
     return [
@@ -23,6 +30,13 @@ export default function Card({ className, content, meta }) {
       [color, text],
       foot
     ]
+  }
+
+  const getHBOEdition = (question = content) => {
+    const _hboRegex = new RegExp(' <(.+)>', 's')
+    const hboResult = question.match(_hboRegex)
+    if (!hboResult) return ''
+    return hboResult[1]
   }
 
   const ownItCardBg = meta.theme === 'ownIt' && isWildcard 
@@ -76,7 +90,8 @@ export default function Card({ className, content, meta }) {
               `\xa0\xa0 X \xa0\xa0${meta.crossover}`}
           </div>
           <div className={styles.edition}>
-            {meta.edition}
+            {meta.edition}{' '}
+            <i>{getHBOEdition()}</i>
           </div>
         </div>
 

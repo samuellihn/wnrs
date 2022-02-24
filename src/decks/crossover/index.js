@@ -4,4 +4,5 @@ module.exports = {
     bumbleBizz:       require('./bumbleBizz'),
     cann:             require('./cann'),
     valentino:        require('./valentino'),
+    hbomax:           require('./hboMax'),
 }

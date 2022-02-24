@@ -36,7 +36,7 @@ export default function DeckDialog(props) {
     const normalizeList = (attr) => {
       if (!DECKS[info][attr]) return ''
       return DECKS[info][attr]
-        .map(line =>`${getRawQuestion(line)}`)
+        .map(line =>`${encodeURIComponent(getRawQuestion(line))}`)
         .join('\n') 
         + '\n\n'
     }

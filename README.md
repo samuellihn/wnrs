@@ -40,17 +40,17 @@ Get wild!
 - WNRS x Cann Expansion Pack 
 - sneaky link edition
 - Ex-Friend edition
+- WNRS x HBO Max Pack
 
 ### Missing Decks
 
-Decks had stopped updating since v1 was discontinued. Feel free to submit a ticket if you have these versions.
+Feel free to submit a ticket if you have these versions.
 
 - Couples Edition
 - Family Edition
 - Friendship Edition
 - New WNRS x Valetino Pack (Black & Gold)
 - New Years Edition
-- WNRS x HBO Max (SoSheDid) Pack
 
 ### Credits
 
@@ -68,5 +68,6 @@ Thanks to various sources to make this possible:
   - Providing the Self-love Edition, Healing Edition, and the Own It Expansion
 - [@cecrandell](https://github.com/cecrandell/) for Voting Edition and Forgiveness Edition 
 - [u/songbirdly](https://www.reddit.com/user/songbirdly) for the Cann Expansion
+- [u/lizzzzzzzz__](https://www.reddit.com/user/lizzzzzzzz__/) for the HBO Max Pack
 
 I do not own any of the resources above.

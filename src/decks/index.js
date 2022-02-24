@@ -23,4 +23,5 @@ module.exports = {
     bumbleBizz:       require('./crossover/bumbleBizz'),
     cann:             require('./crossover/cann'),
     valentino:        require('./crossover/valentino'),
+    hbomax:           require('./crossover/hboMax'),
 }
