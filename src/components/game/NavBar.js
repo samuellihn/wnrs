@@ -42,6 +42,29 @@ export default function NavBar({ onCardChange, onLevelChange, cards, levels }) {
     setLevel(0)
   }, [router.query?.decks])
 
+  useEffect(() => {
+    const handleArrowDown = e => {
+      if (!e.key.startsWith('Arrow')) return
+      const dir = e.key.slice(5).toLowerCase()
+      switch(dir) {
+        case 'left':  
+          if (card > 0) handleBack()
+          break
+        case 'right':
+          if (card < cards - 1) handleNext()
+          break
+        case 'down': 
+          if (level > 0) handlePrevLevel()
+          break
+        case 'up': 
+          if (level < levels -1) handleNextLevel()
+          break
+      }
+    }
+    window.addEventListener('keydown', handleArrowDown)
+    return () => window.removeEventListener('keydown', handleArrowDown)
+  }, [cards, levels])
+
   return (
     <nav className={styles.navbar}>
       <Button themed onClick={handlePrevLevel} disabled={level <= 0}>
