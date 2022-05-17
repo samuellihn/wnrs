@@ -6,7 +6,9 @@
   text-transform: uppercase
   border-radius: 55px
   padding: spacing(2)
-  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)
+
+  &:first-of-type
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)
 
   @each $theme, $map in $card-themes 
     &.norm-#{$theme}
@@ -15,6 +17,10 @@
     &.wild-#{$theme}
       background: map-get($map, 'main')
       color: map-get($map, 'contrastText')
+
+  @include bp-up('md')
+    width: $card-md-width
+    height: $card-md-height
 
 .inner
   height: 100%
@@ -26,6 +32,9 @@
   white-space: pre-line
   font-size: 0.9rem
   font-weight: map-get($typography, fontWeight, bold)
+
+  @include bp-up('md')
+    font-size: 1.35rem
 
   .empty, .wildcardLabel, .normal, .wildcard, .footer
     grid-column: span 2
@@ -53,7 +62,7 @@
     gap: spacing(1)
 
     .crossover
-      font-size: 0.625rem
+      font-size: 0.7em
 
     .edition
-      font-size: 0.525rem
+      font-size: 0.55em
