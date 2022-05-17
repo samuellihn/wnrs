@@ -41,13 +41,13 @@ Get wild!
 - sneaky link edition
 - Ex-Friend edition
 - WNRS x HBO Max Pack
+- Family Edition
 
 ### Missing Decks
 
 Feel free to submit a ticket if you have these versions.
 
 - Couples Edition
-- Family Edition
 - Friendship Edition
 - New WNRS x Valetino Pack (Black & Gold)
 - New Years Edition
