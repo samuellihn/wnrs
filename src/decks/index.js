@@ -1,5 +1,6 @@
 module.exports = {
     main:             require('./mainDeck/main'),
+    family:           require('./mainDeck/family'),
 
     honestDating:     require('./expansion/honestDating'),
     relationship:     require('./expansion/relationship'),
