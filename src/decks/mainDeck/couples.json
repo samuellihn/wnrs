@@ -9,31 +9,25 @@
         "Level 2 Connection", 
         "Level 3 Reflection"
     ],
-    "isExpansion": false,
+    "isExpansion": true,
     "backDesc": [
-        //this stuff is on the inside top of the box
-        "Inside we're all the same.",
-        //this is on the side of the box
         "Warning: These cards will unlock honest answers"
     ],
     "preview": [
-        //this is the stuff on the back of the box
         "What's more romantic than being understood?",
-        "The couples edition is an invitation to better\n understand who your partner is today, not just\n the person who you met them as. There's only one\n rule while playing: Honest answers only./n Ready?"
+        "How well do you know your partner? How well do they know you? The Couples Edition is meant to explore how well you already know each other and unlock the layers you never knew existed.",
+        "It is an invitation to better understand who your partner is today, not just the person who you met them as. There's only one rule while playing: Honest answers only.",
+        "Ready?"
     ],
     "instruction": [
-        //front page
-        "Open Up",
-        //first inner page
-        "How well do you know your partner? How well do they\n know you? The Couples Edition is meant to explore\n how well you already know each other and unlock\n the layers you never knew existed.\n\n This game can be played on its own or with the original\n We're not Really Strangers card game. Alternatively asking\n and answering each question, starting with Level 1 all the\n way up to Level 3. Honest answers only.\n\n Ready?\n\nLevel 1 (Perception):\n\n Level 1 is about gaining perspective on how\n your significant other sees you and challenging any\n assumptions you make about each other. It's also a test\n of how well you two know one another.\n\n",
-        //Second inner page
-        "Answer the first response that comes to mind. If\n guessed incorrectly by your partner, feel free to reveal\n the actual answer.\n\nLevel 2 (Connection):\n\n Who are you, really? This round is about asking the rarely\n asked questions and connecting on a deeper level.\n\nLevel 3 (Reflection):\n\n Time to reflect on your game experience\n\nWildcards:\n\n If you draw a wildcard, your partner must complete the\n instructions unless otherwise stated. These are meant\n to be spontaneous and a lotta bit silly. These cards can appear at any moment during the game!",
-        //third to ninth inner page. Each blurb is on a seperate page and are formatted such that \n\n marks the start of a new page.
-        "Things to remember\n while playing:\n\n 1. Relationships change just\n like people in them do.\n Continue getting to know your\n partner every day.\n\n 2. Your partner can't read\n your mind. Communicate\n your needs, don't just\n think them.\n\n3. Communication creates partnership,\n but that requires\n sharing your truth with your\n partner and being open to\n recieveing theirs. Especially\n when it's uncomfortable.\n\n 4. The most romantic thing\n is being understood. But that\n requires listening actively.\n Limit all distractions when\n your partner is opening\n up to you.\n\n 5. Reveal even what feels\n risky. Let your partner see\n who you really are, not just\n what you think they want\n to see.\n\n 6. Show and tell your partner\n you love them every day. We\n all need more love than we\n lead on.\n\n",
-        //last inner page
-        "How did this game leave you feeling?\n What did it teach you about your partner?\nWhat did it teach you about yourself?"
-        //last outer page just has "stay connected" followed by the contact info of WNRS
-        //I included every BIT of information in the comments and stuff possible so that when you format this one you can make more accurate decisions.
+        "Things to remember while playing:",
+        "1. Relationships change just like people in them do. Continue getting to know your partner every day.",
+        "2. Your partner can't read your mind. Communicate your needs, don't just think them.",
+        "3. Communication creates partnership, but that requires sharing your truth with your partner and being open to receiving theirs. Especially when it's uncomfortable.",
+        "4. The most romantic thing is being understood. But that requires listening actively. Limit all distractions when your partner is opening up to you.",
+        "5. Reveal even what feels risky. Let your partner see who you really are, not just what you think they want to see.",
+        "6. Show and tell your partner you love them every day. We all need more love than we lead on.",
+        "How did this game leave you feeling? What did it teach you about your partner? What did it teach you about yourself?"
     ],
     "questions": [[
         "What do you think I'm\n most sensitive to?",
@@ -58,7 +52,7 @@
         "What do I love that\n most people dislike?",
         "How important do you\n think birthdays and holidays\n are to me? Explain.",
         "Who do you think\n was more nervous\n on our first date?\n Explain.",
-        "If our relationship was\n a netflix series, what would\n it be called? What episode\n are we on?",
+        "If our relationship was\n a Netflix series, what would\n it be called? What episode\n are we on?",
         "What do you think my\n perfect date night would\n be? Describe in detail.",
         "What was the first\n thing you noticed about me\n that wasn't physical?",
         "What assumption did\n you make about me that\n turned out to be false?",
@@ -76,7 +70,7 @@
         "What was I wearing\n on our first date?",
         "How would you describe\n our first date in one word?",
         "Did you ever stalk my\n social media before we met?\n If so, what stood out?",
-        "What's my go-to postmates\n order at the moment?",
+        "What's my go-to Postmates\n order at the moment?",
         "How important do you\n feel physical affection is\n is for me? Explain.",
         "What did your friends\n think about me when we\n first started dating?",
         "How important do you think\n gifts are to me? Explain.",
@@ -91,7 +85,7 @@
         "Wild Card Write down how well\n you feel you know your\n partner on a scale of 1-10.\n Compare and explain.",
         "Wild Card Write down how well you\n feel your partner knows\n you on a scale of 1-10.\n Compare and explain.",
         "Wild Card Write down how many times\n a week you think your partner\n would like to have sex.\n Compare."
-        ], [
+    ], [
        "Finish the sentences:\n I knew I really liked you\n when ______. I knew I loved\n you when ______.",
        "When was the last time\n someone betrayed your trust?\n How did that affect your\n ability to trust today?",
        "What's the sexiest thing\n I do without realizing it?",
@@ -107,9 +101,8 @@
        "What did our worst\n argument teach you?",
        "What are you currently\n working through that I\n don't see, if anything?",
        "How do you think my job\n affects our relationship?",
-       "What have you been extra\n senstive to lately?",
+       "What have you been extra\n sensitive to lately?",
        "What feelings are hard\n for you to communicate to me?\n How can I make it easier?",
-       "What feelings are hard for\n you to communicate to me?\n How can I make it easier?",
        "What immediately attracted\n you to me? What attracted\n you more over time?",
        "What's the best gift\n I've given you? Material\n or immaterial?",
        "What about you feels\n hardest to love?",
@@ -129,7 +122,7 @@
        "How does social media\n affect me in my day to day\n life? How does it affect\n our relationship?",
        "When was the last time I\n made you feel loved when\n you didn't feel lovable?",
        "Have I ever betrayed your\n trust in any big or small way?\n What would help rebuild\n that trust?",
-       "What did you learn from your\n parents'relationship that you'd like to apply/avoid in this one?",
+       "What did you learn from your\n parents' relationship that you'd like to apply/avoid in this one?",
        "When do you think I'm at my best?\n Who am I with? What am I doing?",
        "What's one small thing\n I do that tells you everything\n you need to know about me?",
        "What fight of ours did\n you struggle with most?\n What felt particularly\n hard for you about it?",
@@ -141,7 +134,7 @@
     
         "Wild Card Write down 3 things you love\n most about your partner.\n 1 minute. Compare.",
         "Wild Card Finish the sentence:\n I'm sorry for ______.\n Write it down. Both\n players. Compare.",
-        "Wild Card Write down one small way you\n can be better in this relationsihp.\n Both players. Compare.",
+        "Wild Card Write down one small way you\n can be better in this relationship.\n Both players. Compare.",
         "Wild Card On a scale of 1-10, write down\n the importance of having kids\n to you. Compare and explain.",
         "Wild Card Write a love song for\n your partner. 1 minute.\n Perform for each other.",
         "Wild Card Write a short guide on how\n to love your partner well.\n 30 seconds. Compare.",
@@ -150,7 +143,7 @@
     ], [
         "How have I helped you\n become a better person?",
         "What am I most qualified to\n give relationship advice about?",
-        "Is there anything you stil\n don't know about me that\n you wish you did?",
+        "Is there anything you still\n don't know about me that\n you wish you did?",
         "What answer of mine\n surprised you the most\n throughout this game?",
         "If you could prescribe\n our relationship one thing,\n what would it be and why?",
         "When in this game did you\n feel most connected to me?",
@@ -195,8 +188,8 @@
         "Wild Card Kiss a part of your partner\n you've never kissed before.",
         "Wild Card What memory of ours makes\n you smile just thinking about it?\n Write it down and compare.",
         "Wild Card Think of one thing we can\n do this week to make our\n relationship stronger.\n Schedule it now.",
-        "Wild Card Write a stand up routing about\n our relationship. 1 minute.\n Recite to each other.",
+        "Wild Card Write a stand up routine about\n our relationship. 1 minute.\n Recite to each other.",
         "Wild Card Plan a surprise your partner\n would appreciate. Make it happen\n by the end of this month.\n Both players.",
-        "Wild Card Play a round of\n rock paper scissors\n loser must do anything\n their partner wants."
+        "Wild Card Play a round of\n rock paper scissors.\n Loser must do anything\n their partner wants."
     ]]
 }
