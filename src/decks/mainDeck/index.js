@@ -1,4 +1,5 @@
 module.exports = {
     main:       require('./main'),
-    family:     require('./family')
+    family:     require('./family'),
+    couples:    require('./couples')
 }
