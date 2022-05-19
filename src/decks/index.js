@@ -1,8 +1,8 @@
 module.exports = {
     main:             require('./mainDeck/main'),
-    family:           require('./mainDeck/family'),
-    couples:          require('./mainDeck/couples'),
-
+    
+    family:           require('./expansion/family'),
+    couples:          require('./expansion/couples'),
     honestDating:     require('./expansion/honestDating'),
     relationship:     require('./expansion/relationship'),
     innerCircle:      require('./expansion/innerCircle'),
