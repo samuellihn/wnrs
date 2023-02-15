@@ -1,6 +1,4 @@
 import '@styles/global.sass'
-import firebaseApp from '@firebaseApp'
-import { getAnalytics, logEvent } from 'firebase/analytics'
 import Head from 'next/head'
 import { useEffect } from 'react'
 import { ThemeProvider } from "@src/context/ThemeContext"
@@ -13,9 +11,6 @@ function MyApp({ Component, pageProps }) {
     const appHeight = () => document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
     window.addEventListener('resize', appHeight)
     appHeight()
-    // Setup Firebase Analytics
-    const analytics = getAnalytics(firebaseApp)
-    logEvent(analytics, 'page_view')
     return () => window.removeEventListener('resize', appHeight)
   }, []);
 

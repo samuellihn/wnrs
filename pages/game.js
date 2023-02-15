@@ -62,6 +62,7 @@ export default function Display() {
   return (<>
   
     <Head>
+      <meta name="robots" content="noindex, nofollow" />
       <meta name="theme-color" content={themeColor}/>
     </Head>
   

@@ -1,4 +1,3 @@
-import { getAnalytics, logEvent } from 'firebase/analytics'
 import { createContext, useContext, useEffect, useState } from 'react'
 
 const themes = {
@@ -22,7 +21,6 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('main')
 
   const toggleTheme = _theme => e => {
-    logEvent(getAnalytics(), 'theme_change', {theme: _theme})
     setTheme(_theme)
   }
 

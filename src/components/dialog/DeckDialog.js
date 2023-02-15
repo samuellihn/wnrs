@@ -9,14 +9,12 @@ import * as DECKS from "@src/decks"
 import { ArrowLeft, Download } from "@components/icons"
 import { SwitchTransition, CSSTransition } from 'react-transition-group'
 import clsx from 'clsx'
-import { getAnalytics, logEvent } from 'firebase/analytics'
 
 export default function DeckDialog(props) {
   const router = useRouter()
   const [info, setInfo] = useState(null)
 
   const handleChange = decks => {
-    logEvent(getAnalytics(), `decks`, decks)
     router.replace({
       pathname: router.pathname,
       query: {
